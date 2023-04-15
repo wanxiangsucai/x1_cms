@@ -750,6 +750,9 @@ class Attachment extends IndexBase{
 		        return;
 		    }
 		}
+		if (!getimagesize( $thumb_water_pic )) {
+		    return;
+		}
 		
 		// 读取图片
 		$image = Image::open( $file );
