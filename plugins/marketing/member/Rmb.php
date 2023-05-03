@@ -162,7 +162,7 @@ class Rmb extends MemberBase
 	        }elseif($data['money'] > $this->user['rmb']){
 	            $this->error("提现金额不能大于你的可用余额");
 	        }elseif(strstr($data['banktype'],'weixin') && $this->webdb['max_getout_money']>$this->webdb['min_getout_money'] && $data['money']>$this->webdb['max_getout_money']){
-	            $this->error("每笔提现金额不能大于 ".$this->webdb['min_getout_money']." 元，你可以选择分开多笔提现。<br>因为受制于微信的最高限额！");
+	            $this->error("每笔提现金额不能大于 ".$this->webdb['max_getout_money']." 元，你可以选择分开多笔提现。<br>因为受制于微信的最高限额！");
 	        }elseif($data['money']<$min_money){
 	            $this->error("提现金额不能小于 {$min_money} 元");
 	        }elseif($data['money']<0.01){
