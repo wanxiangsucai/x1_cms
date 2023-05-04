@@ -387,7 +387,7 @@ class Msg
         \"url\":\"$url\",
         \"data\":{
         \"first\": {
-        \"value\":\"$first\",
+        \"value\":\"$content\",
         \"color\":\"#0000ff\"
     },
     \"subject\":{
