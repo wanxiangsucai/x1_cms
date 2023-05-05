@@ -1516,3 +1516,5 @@ INSERT INTO `qb_config` (`id`, `type`, `title`, `c_key`, `c_value`, `form_type`,
 
 ALTER TABLE `qb_config` ADD `is_hide` TINYINT( 1 ) NOT NULL COMMENT '是否隐藏，1是隐藏';
 ALTER TABLE  `qb_config` ADD INDEX (  `is_hide` ) COMMENT  '';
+
+INSERT INTO `qb_config` (`id`, `type`, `title`, `c_key`, `c_value`, `form_type`, `options`, `ifsys`, `htmlcode`, `c_descrip`, `list`, `sys_id`) VALUES(0, 4, '微信公众号模板消息字段名', 'weixin_msgfield', '', 'text', '', 1, '', '比如keyword1，<a target=\"_blank\" href=\"https://www.kancloud.cn/php168/x1_of_qibo/3156540\">具体请点击查看教程</a>', 0, -2);

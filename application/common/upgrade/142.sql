@@ -1,0 +1,1 @@
+INSERT INTO `qb_config` (`id`, `type`, `title`, `c_key`, `c_value`, `form_type`, `options`, `ifsys`, `htmlcode`, `c_descrip`, `list`, `sys_id`) VALUES(0, 4, '微信公众号模板消息字段名', 'weixin_msgfield', '', 'text', '', 1, '', '比如keyword1，<a target=\"_blank\" href=\"https://www.kancloud.cn/php168/x1_of_qibo/3156540\">具体请点击查看教程</a>', 0, -2);
