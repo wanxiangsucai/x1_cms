@@ -380,7 +380,7 @@ class Msg
         $url = $array[2] ? "$array[1]:$array[2]" : request()->url(true);
         $content = preg_replace('/<([^<]*)>/is',"",$content);
         $content = addslashes($content);
-        
+        $field_name = config('webdb.weixin_msgfield')?:'keyword2';
         $data="      {
         \"touser\":\"$openid\",
         \"template_id\":\"".config('webdb.weixin_msg_template_id')."\",
@@ -389,6 +389,10 @@ class Msg
         \"first\": {
         \"value\":\"$content\",
         \"color\":\"#0000ff\"
+    },
+    \"{$field_name}\":{
+    \"value\":\"$content\",
+    \"color\":\"#000000\"
     },
     \"subject\":{
     \"value\":\"$subject\",
